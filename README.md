@@ -34,8 +34,10 @@ nameserver 10.151.73.26
 ~~~
 di file /etc/resolv.conf agar server mengarah ke IP MALANG.
 Mengecek koneksi DNS dengan melakukan ping semerua02.pw pada GRESIK dan SIDOARJO.
-<!--screenshot
-screenshot-->
+
+![soal1](images/soal1.jpg)
+![soal1-1](images/soal1-1.jpg)
+
 ## Soal 2
 http://semerua02.pw memiliki alias http://www.semerua02.pw
 ### Jawab
@@ -44,8 +46,9 @@ Menambahkan record CNAME pada file /etc/bind/jarkom/semerua02.pw di MALANG
 www     IN      CNAME   semerua02.pw.
 ~~~
 Mengecek dengan melakukan ping www.semerua02.pw pada GRESIK dan SIDOARJO.
-<!--screenshot
-screenshot-->
+
+![soal2](images/soal2.jpg)
+![soal2-1](images/soal2-1.png)
 
 ## Soal 3
 Membuat subdomain http://penanjakan.semerua02.pw yang DNS-nya diatur pada MALANG dan mengarah ke IP server PROBOLINGGO.
@@ -55,8 +58,10 @@ Menambahkan record A yang mengarah pada IP PROBOLINGGO pada file /etc/bind/jarko
 penanjakan     IN      A   10.151.73.28
 ~~~
 Mengecek dengan melakukan ping penanjakan.semerua02.pw pada GRESIK dan SIDOARJO.
-<!--screenshot
-screenshot-->
+
+![soal3](images/soal3.png)
+![soal3-1](images/soal3-1.png)
+
 
 ## Soal 4
 Membuat reverse domain untuk domain utama.
@@ -86,7 +91,8 @@ Mengecek konfigurasi sudah benar atau belum dengan melakukan perintah di bawah i
 ~~~
 host -t PTR 10.151.73.28
 ~~~
-<!--screenshot-->
+
+![soal4](images/soal4.png)
 
 ## Soal 5
 Membuat DNS Server Slave pada MOJOKERTO.
@@ -121,7 +127,8 @@ nameserver 10.151.73.27
 ~~~
 di file /etc/resolv.conf agar server mengarah ke IP MOJOKERTO.
 Untuk pengecekan, pertama mematikan service bind9 pada server MALANG selanjutnya dilakukan ping semerua02.pw pada client GRESIK.
-<!--ss-->
+
+![soal5](images/soal5.png)
 
 ## Soal 6
 Membuat subdomain http://gunung.semerua02.pw yang didelegasikan pada pada server MOJOKERTO dan mengarah pada IP server PROBOLINGGO.
@@ -175,7 +182,8 @@ $TTL    604800
 @       IN      A       10.151.73.28
 ~~~
 Mengecek dengan cara melakukan ping gunung.semerua02.pw pada client GRESIK.
-<!--ss-->
+
+![soal6](images/soal6.png)
 
 ## Soal 7
 Membuat subdomain http://naik.gunung.semerua02.pw yang diarahkan ke IP PROBOLINGGO.
@@ -185,7 +193,8 @@ Menambahkan record A naik yang mengarah ke 10.151.73.28 pada file /etc/bind/dele
 naik    IN      A       10.151.73.28
 ~~~
 Mengecek dengan cara melakukan ping naik.gunung.semerua02.pw pada client GRESIK.
-<!--ss-->
+
+![soal7](images/soal7.png)
 
 Untuk soal 8 - 17 semua konfigurasi dilakukan di server PROBOLINGGO.
 ## Soal 8
@@ -230,7 +239,7 @@ Kemudian menambahkan syntax berikut pada file /etc/apache2/sites-available/semer
 </Directory>
 ~~~
 
-<!--ss-->
+![soal89](images/soal9.jpg)
 
 ## Soal 10
 Mengatur web server http://penanjakan.semerua02.pw
@@ -265,7 +274,10 @@ Menambahkan syntax berikut pada file /etc/apache2/sites-available/penanjakan.sem
         Options -Indexes
 </Directory>
 ~~~
-<!--ss-->
+
+![soal11](images/soal11.png)
+![soal11-1](images/soal11-1.png)
+![soal11-2](images/soal11-2.png)
 
 ## Soal 12
 Mengubah error default 404 menjadi file 404.html yang sudah disediakan
@@ -274,6 +286,8 @@ Menambahkan syntax berikut pada file /etc/apache2/sites-available/penanjakan.sem
 ~~~
 ErrorDocument 404 "/errors/404.html"
 ~~~
+
+![soal12](images/soal12.png)
 
 ## Soal 13
 Dapat mengakses file assets http://penanjakan.semerua02.pw/public/javascripts dengan http://penanjakan.semerua02.pw/js
@@ -316,7 +330,8 @@ htpasswd -c /etc/apache2/.htpasswd semeru
 -c adalah opsi untuk membuat file, dan argumen semeru merupakan entry username.
 Setelah menjalankan perintah tersebut, akan diminta muntuk memasukkan password yaitu kuynaikgunung.
 Mengecek isi dari file .htpasswd
-<!--ss-->
+
+![soal15](images/soal15.jpg)
 
 Selanjutnya, menambahkan syntax berikut pada file /etc/apache2/sites-available/naik.gunung.semerua02.pw
 ~~~
@@ -329,7 +344,10 @@ Selanjutnya, menambahkan syntax berikut pada file /etc/apache2/sites-available/n
         ....
 </Directory>
 ~~~
-<!--ss-->
+Sebelum login.
+![soal15-1](images/soal15-1.jpg)
+Sesudah login
+![soal15-2](images/soal15-2.png)
 
 ## Soal 16
 Setiap mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke http://semeruyyy.pw.
