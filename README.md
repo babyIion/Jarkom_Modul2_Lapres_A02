@@ -254,7 +254,7 @@ Serta mengubah DocumentRoot dan Directory menjadi
 DocumentRoot /var/www/penanjakan.semerua02.pw
 <Directory /var/www/penanjakan.semerua02.pw>
 ~~~
-Dan juga menghapus option `Indexes` dalam <Directory>. 
+Dan juga menghapus option `Indexes` dalam `<Directory>`. 
 Berikutnya, membuat direktori penanjakan.semerua02.pw dalam /var/www/ yang kemudian diisi dengan file-file pendukung untuk web http://penanjakan.semerua02.pw
 Terakhir mengaktifkan site penanjakan.semerua02.pw dengan cara menjalankan perintah
 ~~~
@@ -365,5 +365,5 @@ Karena pengunjung pada /var/www/penanjakan.semeruyyy.pw/public/images sangat ban
 Membuat file .htaccess pada direktori /var/www/penanjakan.semerua02.pw yang berisi syntax berikut.
 ~~~
 RewriteEngine On
-RewriteRule public/images.*semeru*.\.jpg public/images/semeru.jpg
+RewriteRule public/images/.*semeru*.\.jpg public/images/semeru.jpg
 ~~~
