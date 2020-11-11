@@ -265,7 +265,7 @@ pada direktori /etc/apache2/sites-available.
 ## Soal 11
 Hanya bisa melakukan directory listing pada /public.
 ### Jawab
-Menambahkan syntax berikut pada file /etc/apache2/sites-available/penanjakan.semerua02.pw
+Menambahkan syntax berikut pada file /etc/apache2/sites-available/penanjakan.semerua02.pw, selain itu juga menghapus `Indexes` dalam `<Directory /var/www/penanjakan.semerua02.pw>`
 ~~~
 <Directory /var/www/penanjakan.semerua02.pw/public>
         Options +Indexes
