@@ -359,6 +359,9 @@ RewriteCond %{HTTP_HOST} ^10\.151\.73\.28$
 RewriteRule ^(.*)$ http://semerua02.pw/$1 [L,R=301]
 ~~~
 
+Cara lain:
+Menambahkan `Redirect / http://semerua02.pw/` pada file /etc/apache2/sites-available/default.
+
 ## Soal 17
 Karena pengunjung pada /var/www/penanjakan.semeruyyy.pw/public/images sangat banyak maka semua request gambar yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
 ### Jawab
